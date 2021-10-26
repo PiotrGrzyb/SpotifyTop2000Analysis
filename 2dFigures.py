@@ -28,7 +28,26 @@ def main():
 
     fig4 = px.scatter(spotifyDataSet, x="Popularity", y="Year", size="Energy", color="Beats Per Minute (BPM)",
                       hover_name="Title")
-    # fig4.show()
+    fig4.add_layout_image(
+        dict(
+            source="C:/Users/Piotr/PycharmProjects/SpotifyTop2000Analysis/logo.png",
+            xref="paper", yref="paper",
+            x=1, y=1.05,
+            sizex=0.2, sizey=0.2,
+            xanchor="right", yanchor="bottom"
+        )
+    )
+    fig4.update_layout(
+        autosize=False,
+        height=800,
+        width=700,
+        bargap=0.15,
+        bargroupgap=0.1,
+        barmode="stack",
+        hovermode="x",
+        margin=dict(r=20, l=300, b=75, t=125),
+    )
+    fig4.show()
 
     # fig5 = px.pie(spotifyDataSet, values="Popularity", names="Top Genre")
     # fig5.show()
@@ -42,8 +61,8 @@ def main():
     #fig7 = px.pie(spotifyDataSet, values="Popularity", names="Top Genre")
     #fig7.show()
 
-    fig8 = px.histogram(spotifyDataSet, x="Top Genre", y="Popularity")
-    fig8.show()
+    #fig8 = px.histogram(spotifyDataSet, x="Top Genre", y="Popularity")
+    #fig8.show()
 
 if __name__ == '__main__':
     main()
