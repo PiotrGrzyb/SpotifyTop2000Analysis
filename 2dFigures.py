@@ -16,15 +16,18 @@ def main():
     # plt.show(block=True)
     # plt.interactive(False)
 
-    # fig = px.scatter(spotifyDataSet, x="Popularity", y="Year")
-    # fig.show()
+    fig = px.scatter(spotifyDataSet, x="Popularity", y="Year")
+    fig.show()
 
-    # fig2 = px.scatter(spotifyDataSet, x="Popularity", y="Year", color="Loudness (dB)")
-    # fig2.show()
+    histogram = px.histogram(spotifyDataSet, x="Year")
+    histogram.show()
+
+    fig2 = px.scatter(spotifyDataSet, x="Popularity", y="Year", color="Loudness (dB)")
+    fig2.show()
 
     fig3 = px.scatter(spotifyDataSet, x="Popularity", y="Top Genre", size="Energy", color="Beats Per Minute (BPM)",
                       hover_name="Title")
-    # fig3.show()
+    fig3.show()
 
     fig4 = px.scatter(spotifyDataSet, x="Popularity", y="Year", size="Energy", color="Beats Per Minute (BPM)",
                       hover_name="Title")
