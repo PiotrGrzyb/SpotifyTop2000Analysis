@@ -3,7 +3,7 @@ import wordcloud
 from wordcloud import STOPWORDS, WordCloud
 import matplotlib.pyplot as plt
 
-ds = pandas.read_csv('../SpotifyTop2000/Spotify-2000.csv')
+ds = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
 spotifyDataSet = ds.sort_values(by='Popularity', ascending='False')
 
 stopwords = set(STOPWORDS)

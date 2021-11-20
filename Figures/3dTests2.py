@@ -6,15 +6,16 @@ import numpy as np
 
 
 def main():
-    spotifyDataSet = pandas.read_csv('../SpotifyTop2000/Spotify-2000.csv')
-    fig3 = px.scatter_3d(spotifyDataSet, x='Popularity',
+    sDS = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
+    sDS.sort_values('Year')
+    fig3 = px.scatter_3d(sDS, x='Popularity',
                          y='Energy',
                          z='Danceability',
                          color='Beats Per Minute (BPM)',
                          size='Valence',
                          symbol='Loudness (dB)',
                          hover_name='Title',
-                         animation_frame='Top Genre',
+                         animation_frame='Year',
                          animation_group='Title',
                          size_max=55, range_z=[0, 100], range_y=[0, 100], range_x=[0, 100]
                          )

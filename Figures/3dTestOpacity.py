@@ -5,7 +5,7 @@ from sklearn import preprocessing
 
 
 def main():
-    sDS = pandas.read_csv('../SpotifyTop2000/Spotify-2000.csv')
+    sDS = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
     sDS.sort_values('Year')
 
     column_names_to_normalize = ['Liveness']

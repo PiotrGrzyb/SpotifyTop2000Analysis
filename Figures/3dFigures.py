@@ -6,7 +6,7 @@ import numpy as np
 
 
 def main():
-    spotifyDataSet = pandas.read_csv('../SpotifyTop2000/Spotify-2000.csv')
+    spotifyDataSet = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
     # Check if data set is loaded
     # print(spotifyDataSet.head())
     # Check dataset columns
