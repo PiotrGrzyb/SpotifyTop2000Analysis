@@ -15,6 +15,8 @@ def histograms(dataSet=None):
     print("[10] Popularity")
     print("[11] Top Genre")
     print("[12] Artist")
+    print("[13] Artist, cumulative histogram")
+
 
     choice1 = input("Which attribute histogram to show ")
 
@@ -28,7 +30,7 @@ def histograms(dataSet=None):
         Histogram = px.histogram(data_frame=dataSet, x='Beats Per Minute (BPM)')
         Histogram.show()
     elif int(choice1) == 4:
-        Histogram = px.histogram(data_frame=dataSet, x='Danceabillity')
+        Histogram = px.histogram(data_frame=dataSet, x='Danceability')
         Histogram.show()
     elif int(choice1) == 5:
         Histogram = px.histogram(data_frame=dataSet, x='Loudness (dB)')
@@ -53,4 +55,7 @@ def histograms(dataSet=None):
         Histogram.show()
     elif int(choice1) == 12:
         Histogram = px.histogram(data_frame=dataSet, x='Artist')
+        Histogram.show()
+    elif int(choice1) == 13:
+        Histogram = px.histogram(data_frame=dataSet, x='Artist', range_y=[10, 40])
         Histogram.show()

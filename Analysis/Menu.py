@@ -3,7 +3,7 @@ import plotly.express as px
 from SetStats import stats
 from BoxPlots import box
 from Histo import histograms
-
+from Scatter import scatter
 
 def main():
     run = True
@@ -14,7 +14,8 @@ def main():
         print("[2] Box plot")
         print("[3] Histograms")
         print("[4] Correlation matrix")
-        print("[5] Quit")
+        print("[5] Scatter with regression")
+        print("[6] Quit")
         choice = input("What you want to view?:")
 
         if int(choice) == 1:
@@ -33,6 +34,9 @@ def main():
             fig.show()
 
         elif int(choice) == 5:
+            scatter(spotifyDataSet)
+
+        elif int(choice) == 6:
             run = False
 
 
