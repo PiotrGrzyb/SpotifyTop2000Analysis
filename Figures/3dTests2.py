@@ -8,6 +8,7 @@ import numpy as np
 def main():
     sDS = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
     sDS.sort_values('Year')
+
     fig3 = px.scatter_3d(sDS, x='Popularity',
                          y='Energy',
                          z='Danceability',
@@ -25,6 +26,11 @@ def main():
         xanchor="left",
         x=0.01
     ))
+
+    fig3.data[0].marker.symbol = 'diamond-open'
+    fig3.data[1].marker.symbol = 'cross'
+    fig3.data[2].marker.symbol = 'circle-open'
+    fig3.show()
 
     fig3.show()
 

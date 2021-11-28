@@ -22,12 +22,12 @@ def main():
     histogram = px.histogram(spotifyDataSet, x="Year")
     histogram.show()
 
-    fig2 = px.scatter(spotifyDataSet, x="Popularity", y="Year", color="Loudness (dB)")
+    fig2 = px.scatter(spotifyDataSet, x="Popularity", y="Year", color="Loudness (dB)", symbol="Top Genre")
     fig2.show()
 
     fig3 = px.scatter(spotifyDataSet, x="Popularity", y="Top Genre", size="Energy", color="Beats Per Minute (BPM)",
                       hover_name="Title")
-    fig3.show()
+    #fig3.show()
 
     fig4 = px.scatter(spotifyDataSet, x="Popularity", y="Year", size="Energy", color="Beats Per Minute (BPM)",
                       hover_name="Title")
@@ -50,7 +50,7 @@ def main():
         hovermode="x",
         margin=dict(r=20, l=300, b=75, t=125),
     )
-    fig4.show()
+    #fig4.show()
 
     # fig5 = px.pie(spotifyDataSet, values="Popularity", names="Top Genre")
     # fig5.show()

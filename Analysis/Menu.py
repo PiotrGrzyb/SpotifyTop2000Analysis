@@ -8,7 +8,7 @@ from Scatter import scatter
 def main():
     run = True
     while run:
-        spotifyDataSet = pandas.read_csv('../../SpotifyTop2000/Spotify-2000.csv')
+        spotifyDataSet = pandas.read_csv('../Spotify-2000Group.csv')
 
         print("[1] Stats")
         print("[2] Box plot")
